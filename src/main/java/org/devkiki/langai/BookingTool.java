@@ -23,7 +23,7 @@ public class BookingTool {
         return serviceItemService.all();
     }
 
-    @Tool("Book a service for a user at a given time")
+    @Tool("Book a service for a user. Time must be in ISO-8601 format (e.g. 2025-06-20T12:00:00)")
     public Booking bookService(Long serviceId, String fullName, String email, String time) {
         var dto = new CreateBookingDto(serviceId, fullName, email, time);
         return bookingService.book(dto);

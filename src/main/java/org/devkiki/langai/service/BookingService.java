@@ -22,7 +22,7 @@ public class BookingService {
         LocalDateTime dateTime = LocalDateTime.parse(dto.time());
         Booking booking = new Booking();
         booking.setFullName(dto.fullName());
-        booking.setEmail(dto.fullName());
+        booking.setEmail(dto.email());
         booking.setService(foundService);
         booking.setBookingTime(dateTime);
 
