@@ -1,4 +1,4 @@
-package org.devkiki.langai.controller;
+package org.devkiki.langai.dto;
 
 public record ChatRequest(
         String message
