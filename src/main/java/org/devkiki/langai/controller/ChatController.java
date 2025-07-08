@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/ai")
 @RequiredArgsConstructor
@@ -20,9 +22,10 @@ public class ChatController {
 
     @PostMapping("/chat")
     @Operation(summary = "Interact with Agentic RAG - Just prompt")
-    public ResponseEntity<String> chat(@RequestBody ChatRequest chatRequest) {
+    public ResponseEntity<Map<String, String>> chat(@RequestBody ChatRequest chatRequest) {
         String message = chatRequest.message();
-        String response = assistant.chat(message);
+        String botResponse = assistant.chat(message);
+        Map<String, String> response = Map.of("reply", botResponse);
         return ResponseEntity.ok(response);
     }
 

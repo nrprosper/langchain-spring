@@ -1,4 +1,4 @@
-# Conversational Booking API – Spring Boot + LangChain4j + Gemini
+# KaziBot : Conversational Booking API – Spring Boot + LangChain4j + Gemini
 
 AI-powered booking API using Spring Boot, LangChain4j, and Gemini. Interact with your services via natural language.
 
