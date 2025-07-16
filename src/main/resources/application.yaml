@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: lang-ai
+  profiles:
+    active: prod
