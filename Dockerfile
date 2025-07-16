@@ -44,4 +44,4 @@ COPY --from=extract build/target/extracted/application/ ./
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "org.springframework.boot.loader.launch.JarLauncher" ]
+ENTRYPOINT [ "java", "-Djava.net.preferIPv4Stack=true", "org.springframework.boot.loader.launch.JarLauncher" ]
